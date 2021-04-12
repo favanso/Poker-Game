@@ -1,0 +1,45 @@
+Create a basic 5 card poker game.
+
+Class for Deck of Cards that is a list of Card
+
+Card should have enums for Suit and Face - 4 suits, 13 faces, 52 cards in a deck
+
+Card class should have a copy constructor to create a new card from a copy of another.
+
+Deck should have a getRandomCard method 
+( pick a random card from the deck and then remove it so you don't pick again ) 
+
+Create a 5 card hand for the computer player
+ ( if you keep them sorted, high to low, it will make life easier ) 
+
+Create a 5 card hand for the user. 
+( if you keep them sorted, high to low, it will make life easier )
+
+Display the users cards to them.
+
+The game has each player bet $1 initially for each hand 
+( be sure to start with a new deck each hand as well) .  
+On the players turn, they can raise or call.
+
+If you raise, add $1 from the players pool of money, 
+and the computer will pick a random number and fold or call 50% of the time.
+
+After the hand is called, compare the hands to see who wins the money in the pot.
+ Add that the computer or player balance. If there is a draw, each player gets 1/2 the money.
+
+For hand comparison see https://en.wikipedia.org/wiki/List_of_poker_hands 
+
+The PokerHand class has a private attribute for it's 5 cards and it's constructor
+ should accept the 5 cards ( sort them in the constructor )
+ and should have a method that accepts another PokerHand class and compares itself to other, 
+it should return a win/draw/lose enum result.
+
+When comparing poker hands, first determine hand rank using 
+a method that uses a rank enum, if the ranks are different, the better rank wins. 
+If the hand ranks are the same, you need to determine the tie breaker, 
+some ranks can tie, other can not.
+
+Keep running the game until the player quits or someone runs out of money.
+
+ Include Unit tests to ensure 100% code coverage of the PokerHand class 
+( that's all the compare and rank stuff... )
